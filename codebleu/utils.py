@@ -160,6 +160,9 @@ def get_tree_sitter_language(lang: str) -> Language:
         elif lang == "python":
             import tree_sitter_python
 
+            # this is giving a TypeError: an integer is required
+            # replace this line with return Language(0) result in ValueError: invalid language ID
+            # return Language(0) 
             return Language(tree_sitter_python.language())
         elif lang == "go":
             import tree_sitter_go
